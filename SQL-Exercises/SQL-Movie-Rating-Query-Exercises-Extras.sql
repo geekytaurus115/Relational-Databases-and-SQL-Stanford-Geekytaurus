@@ -150,9 +150,10 @@ FROM (SELECT director
 		FROM Movie
 		GROUP BY director
 		HAVING COUNT(*) > 1) t, Movie m
-WHERE m.director = t.director;
+WHERE m.director = t.director
+ORDER BY m.director, m.title;
 
-	
+
   
   
   
