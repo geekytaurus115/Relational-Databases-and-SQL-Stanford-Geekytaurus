@@ -85,7 +85,9 @@ FROM Reviewer rev1, Reviewer rev2, Rating r1, Rating r2
 WHERE r1.rID = rev1.rID
 AND r2.rID = rev2.rID
 AND r1.mID = r2.mID
-AND rev1.name < rev2.name;
+AND rev1.name < rev2.name 
+ORDER BY rev1.name;
+
 
 	    
       
